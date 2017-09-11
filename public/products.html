@@ -1,0 +1,30 @@
+<div class="mainP">
+<a href="/"><h1>Back</h1></a>
+<h2>Детальна інформація про: <br> {{title}}</h2>
+<div class="mainS">
+<img src="tovaru/{{photo}}" alt="">
+<div class="info">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident deleniti porro dignissimos deserunt dolorum pariatur, molestias eius temporibus consequuntur consectetur. Ipsum, dolore maiores consequatur dolores hic deserunt doloremque excepturi, repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga, quaerat quis sequi velit quod labore dignissimos, cumque illo maxime a voluptate! Ipsa, molestiae ea accusamus officiis porro quasi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque rem magni rerum laudantium, minima aspernatur animi aut deleniti soluta ex, eius iusto voluptatibus eum, corporis, odit libero obcaecati! Soluta, temporibus! </p>
+</div>
+<div ng-controller="chatCtrl as my" class="all">
+	<div class="chat">
+	<h2>Відгуки:</h2>
+	<div ng-model="my.chat" class="www">
+		<span  ng-repeat ="a in arres" class="cht">{{a.name}}<br>{{a.user}} <br> {{a.date | date:'yyyy-MM-dd'}} <br><br> </span>
+		</div>
+</div>
+</div>
+<br>
+</div>
+<h3>Вартість: {{text | currency}}</h3>
+<div class="voice">
+<div class="first">
+	<input type="text" ng-model="my.user" class="us"><br>
+	<input type="submit" ng-model="my.send" value="Ваше Ім'я" class="ys">
+	</div>
+	<form name="myFormik" novalidate>
+		<input type="text" placeholder="Enter text" ng-model="textField" class="inputText" required> <br> <button ng-click="Enter Text()" ng-disabled="myFormik.$invalid" class="sendButton">Залишити відгук</button>
+	</form>
+</div>
+</div>
+

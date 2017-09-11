@@ -1,0 +1,18 @@
+<div class="send">
+<div class="speek" ng-controller="chat2Ctrl as my">
+	<div class="chat2">
+	<div ng-model="my.chat2" class="www2">
+		<p ng-repeat ="a in arres" class="cht2">{{a.name}}<br>{{a.user}} <br> {{a.date | date:'yyyy-MM-dd'}} <br><br></p>
+		</div>
+</div>
+</div>
+<div class="chattext">
+<div class="first2">
+	</div><br>
+	<form name="myFormik" novalidate>
+	<textarea placeholder="Enter text" ng-model="textField2" class="inputText2" required></textarea>
+	</form>
+	</div>
+	<button ng-click="Enter Text()" ng-disabled="myFormik.$invalid" class="sendButton2">Надіслати</button>
+	
+</div>

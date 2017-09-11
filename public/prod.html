@@ -1,0 +1,14 @@
+
+<div class="products">
+		<div class="search">
+			<p class="one">Тип товару:<input type="text" class="filt" ng-model="test">Вартість товару:
+			<input type="text" class="filt" ng-model="test2"></p>
+			<div class="tovary">
+			<div class="prod" ng-repeat ="a in arres | filter:test | filter:test2 | orderBy:sortType:sortReverse">
+		<h3>{{a.title}}</h3>
+		<a ng-href="/#!/tovary/{{a.title}}/{{a.text}}/{{a.photo}}"><img ng-src="{{a.photo}}" /></a>
+		<p>Вартість: {{a.text | currency}}</p>
+		</div>
+			</div>
+		</div>
+	</div>
